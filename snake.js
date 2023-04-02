@@ -14,10 +14,9 @@ function drawSnake() {
 }
 
 function drawFood() {
-  ctx.fillStyle = "brown";
-  ctx.beginPath();
-  ctx.arc((food.x * box) + (box / 2), (food.y * box) + (box / 2), box / 2, 0, Math.PI * 2);
-  ctx.fill();
+  const img = new Image();
+  img.src = "inseto.png";
+  ctx.drawImage(img, food.x * box, food.y * box, box, box);
 }
 
 function moveSnake() {
