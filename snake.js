@@ -14,8 +14,10 @@ function drawSnake() {
 }
 
 function drawFood() {
-  ctx.fillStyle = "red";
-  ctx.fillRect(food.x * box, food.y * box, box, box);
+  ctx.fillStyle = "brown";
+  ctx.beginPath();
+  ctx.arc((food.x * box) + (box / 2), (food.y * box) + (box / 2), box / 2, 0, Math.PI * 2);
+  ctx.fill();
 }
 
 function moveSnake() {
